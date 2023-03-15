@@ -1,9 +1,11 @@
 import { useFormik } from 'formik';
 import validationSchema from './validations';
 
-function SignUp()  {
+function SignUp() {
     const {handleSubmit, handleChange, handleBlur, values, errors, touched} = useFormik({
         initialValues: {
+          name: '',
+          lastName: '',
           email: '',
           password: '',
           passwordConfirm: '',
@@ -14,9 +16,18 @@ function SignUp()  {
         validationSchema,
     });
     return (
-        <div>
-            <h1>Sign Up</h1>
+        <div className='sign__up__form'>
             <form onSubmit={handleSubmit}>
+
+              <label>Name</label>
+              <input name='name' value={values.name} onChange={handleChange} onBlur={handleBlur}/>
+
+              {errors.name && touched.name && <div className="error">{errors.name}</div>}
+
+              <label>Last Name</label>
+              <input name='lastName' value={values.lastName} onChange={handleChange} onBlur={handleBlur}/>
+
+              {errors.lastName && touched.lastName && <div className="error">{errors.lastName}</div>}
     
               <label>Email</label>
               <input name='email' value={values.email} onChange={handleChange} onBlur={handleBlur}/>
