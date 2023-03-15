@@ -29,6 +29,34 @@ html, body {
   font-family: var(--app-font);
 }
 
+.App .intro__content span {
+    color: var(--white);
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 1;
+}
+
+.App .intro__content p {
+  color: var(--white);
+  font-size: 16px;
+  margin-top: 25px;
+}
+
+.App .sign__up__form .try__it__free {
+  background-color: var(--blue);
+  text-align: center;
+  border-radius: 7px;
+  padding: 10px 50px;
+  margin-bottom: 25px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.App .sign__up__form .try__it__free span {
+  color: var(--white);
+  font-size: 16px;
+  text-align: center;
+}
+
 .App .sign__up__form code {
   display: none;
 }

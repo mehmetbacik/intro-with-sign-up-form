@@ -5,8 +5,16 @@ import IntroContent from './components/IntroContent';
 function App() {
   return (
     <div className="App">
-        <IntroContent />
-        <SignUp />
+      <div className='container'>
+        <div className='row'>
+          <div className='col-lg-6'>
+            <IntroContent />
+          </div>
+          <div className='col-lg-6'>
+            <SignUp />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
