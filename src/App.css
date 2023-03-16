@@ -21,12 +21,15 @@ body {
   background-color: var(--red);
   background-size: cover;
   background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--app-font);
 }
 
 html, body {
   margin: 0;
   padding: 0;
-  font-family: var(--app-font);
 }
 
 .App .intro__content span {
@@ -46,7 +49,7 @@ html, body {
   background-color: var(--blue);
   text-align: center;
   border-radius: 7px;
-  padding: 10px 50px;
+  padding: 20px 50px;
   margin-bottom: 25px;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
@@ -55,6 +58,13 @@ html, body {
   color: var(--white);
   font-size: 16px;
   text-align: center;
+}
+
+.App .sign__up__form .form__content {
+  background-color: var(--white);
+  border-radius: 7px;
+  padding: 40px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .App .sign__up__form code {

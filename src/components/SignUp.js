@@ -20,26 +20,37 @@ function SignUp() {
             <div className='try__it__free'>
               <span><b>Try it free 7 days</b> then $20/mo. thereafter</span>
             </div>
-            <form onSubmit={handleSubmit}>
-              <input name='name' value={values.name} onChange={handleChange} onBlur={handleBlur}/>
-              {errors.name && touched.name && <div className="error">{errors.name}</div>}
-              
-              <input name='lastName' value={values.lastName} onChange={handleChange} onBlur={handleBlur}/>
-              {errors.lastName && touched.lastName && <div className="error">{errors.lastName}</div>}
-              
-              <input name='email' value={values.email} onChange={handleChange} onBlur={handleBlur}/>
-              {errors.email && touched.email && <div className="error">{errors.email}</div>}
-              
-              <input type="password" name='password' value={values.password} onChange={handleChange} onBlur={handleBlur}/>
-              {errors.password && touched.password && <div className="error">{errors.password}</div>}
-
-              <input type="password" name='passwordConfirm' value={values.passwordConfirm} onChange={handleChange} onBlur={handleBlur}/>
-              {errors.passwordConfirm && touched.passwordConfirm && <div className="error">{errors.passwordConfirm}</div>}
-    
-              <button type="submit">Submit</button>
-
-              <code>{JSON.stringify(values)}</code>
-            </form>
+            <div className='form__content'>
+              <form onSubmit={handleSubmit}>
+                <div>
+                  <input name='name' value={values.name} onChange={handleChange} onBlur={handleBlur}/>
+                  {errors.name && touched.name && <div className="error">{errors.name}</div>}
+                </div>
+                <div>
+                  <input name='lastName' value={values.lastName} onChange={handleChange} onBlur={handleBlur}/>
+                  {errors.lastName && touched.lastName && <div className="error">{errors.lastName}</div>}
+                </div>
+                <div>
+                  <input name='email' value={values.email} onChange={handleChange} onBlur={handleBlur}/>
+                  {errors.email && touched.email && <div className="error">{errors.email}</div>}
+                </div>
+                <div>
+                  <input type="password" name='password' value={values.password} onChange={handleChange} onBlur={handleBlur}/>
+                  {errors.password && touched.password && <div className="error">{errors.password}</div>}
+                </div>
+                <div>
+                  <input type="password" name='passwordConfirm' value={values.passwordConfirm} onChange={handleChange} onBlur={handleBlur}/>
+                  {errors.passwordConfirm && touched.passwordConfirm && <div className="error">{errors.passwordConfirm}</div>}
+                </div>
+                <div>
+                  <button type="submit">Submit</button>
+                </div>
+                <div>
+                  <span>By clicking the button, you are agreeing to our <b>Terms and Services</b></span>
+                </div>
+                <code>{JSON.stringify(values)}</code>
+              </form>
+            </div>
         </div>
     )
 }
