@@ -43,7 +43,7 @@ function SignUp() {
                   {errors.passwordConfirm && touched.passwordConfirm && <div className="error">{errors.passwordConfirm}</div>}
                 </div>
                 <div>
-                  <button type="submit">Submit</button>
+                  <button type="submit">Claim Your Free Trial</button>
                 </div>
                 <div>
                   <span>By clicking the button, you are agreeing to our <b>Terms and Services</b></span>
