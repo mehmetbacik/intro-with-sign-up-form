@@ -45,7 +45,7 @@ function SignUp() {
                 <div>
                   <button type="submit">Claim Your Free Trial</button>
                 </div>
-                <div>
+                <div className='text'>
                   <span>By clicking the button, you are agreeing to our <b>Terms and Services</b></span>
                 </div>
                 <code>{JSON.stringify(values)}</code>

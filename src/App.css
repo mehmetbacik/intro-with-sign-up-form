@@ -9,6 +9,7 @@
     --blue: hsl(248, 32%, 49%);
     --red: hsl(0, 100%, 74%);
     --green: hsl(154, 59%, 51%); 
+    --gray: hsl(230.77deg 15.66% 83.73%);
 }
 
 html {
@@ -72,7 +73,7 @@ html, body {
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #ccc;
+  border: 1px solid var(--gray);
   border-radius: 4px;
   box-sizing: border-box;
 }
@@ -87,10 +88,24 @@ html, body {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 .App .sign__up__form .form__content button:hover {
   background-color: var(--green);
+}
+
+.App .sign__up__form .form__content .text {
+  text-align: center;
+}
+
+.App .sign__up__form .form__content .text span {
+  font-size: 12px;
+  color: var(--gray);
+}
+
+.App .sign__up__form .form__content .text span b {
+  color: var(--red);
 }
 
 .App .sign__up__form code {
