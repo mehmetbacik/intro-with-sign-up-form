@@ -145,6 +145,10 @@ html, body {
 }
 
 @media (max-width: 768px) { 
+  body {
+    background-image: url(/src/img/bg-intro-mobile.png);
+  }
+
   .App .intro__content {
     margin-top: 50px;
   }
