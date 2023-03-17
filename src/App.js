@@ -10,7 +10,7 @@ function App() {
           <div className='col-lg-6'>
             <IntroContent />
           </div>
-          <div className='col-lg-6'>
+          <div className='col-lg-6 my-5'>
             <SignUp />
           </div>
         </div>

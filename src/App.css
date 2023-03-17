@@ -68,7 +68,32 @@ html, body {
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
-.App .sign__up__form .form__content input, select {
+.App .sign__up__form .form__content .input .error {
+  color: var(--red);
+  font-size: 12px;
+  font-weight: 500;
+  font-style: italic;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.App .sign__up__form .form__content .input .input__content {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.App .sign__up__form .form__content .input .warning-img {
+  position: absolute;
+  margin-top: 7px;
+  right: 20px;
+}
+
+.App .sign__up__form .form__content .input .warning-img:before {
+  content: url(./img/icon-error.svg);
+}
+
+.App .sign__up__form .form__content .input input, select {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -78,20 +103,21 @@ html, body {
   box-sizing: border-box;
 }
 
-.App .sign__up__form .form__content button {
+.App .sign__up__form .form__content .input button {
   width: 100%;
   background-color: var(--green);
   color: var(--white);
   padding: 14px 20px;
   margin: 8px 0;
   text-transform: uppercase;
+  font-weight: 700;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
-.App .sign__up__form .form__content button:hover {
+.App .sign__up__form .form__content .input button:hover {
   background-color: var(--green);
 }
 
@@ -112,4 +138,22 @@ html, body {
   display: none;
 }
 
+@media (max-width: 991px) { 
+  .App .intro__content {
+    text-align: center;
+  }
+}
 
+@media (max-width: 768px) { 
+  .App .intro__content {
+    margin-top: 50px;
+  }
+
+  .App .intro__content span {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 375px) { 
+
+}

@@ -1,11 +1,11 @@
 import * as yup from "yup";
 
 const validations = yup.object().shape({
-    name: yup.string().required("Zorunlu"),
-    lastName: yup.string().required("Zorunlu"),
-    email: yup.string().email("Geçerli bir email girin.").required("Zorunlu"),
-    password: yup.string().min(5, 'Parolanız en az 5 karakter olmalıdır.').required("Zorunlu"),
-    passwordConfirm: yup.string().oneOf([yup.ref('password')], 'Parola eşleşme hatası.').required("Zorunlu"),
+    name: yup.string().required("First Name cannot be empty"),
+    lastName: yup.string().required("Last Name cannot be empty"),
+    email: yup.string().email("Looks like this is not an email").required("Email cannot be empty"),
+    password: yup.string().min(5, 'Password must be a minimum of 5 characters').required("Password cannot be empty"),
+    passwordConfirm: yup.string().oneOf([yup.ref('password')], 'Password is not the same').required("Confirm Password cannot be empty"),
 });
 
 export default validations;
